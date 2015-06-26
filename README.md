@@ -1,6 +1,6 @@
 # Matrix Math for the Web
 
-This content kit is brief overview of manipulating 3d objects with matrices, a concept from linear algebra. Matrix math is used heavily in WebGL, but Web Developers are more familiar with DOM manipulation. This intro divorces the explanation of matrices from the WebGL APIs by using the CSS3 `matrix3d` transform.
+This content kit is brief overview of manipulating 3d objects with matrices (a concept from linear algebra.) Matrix math is used heavily in WebGL, but web developers are more familiar with DOM manipulations. This intro divorces the explanation of matrices from the WebGL APIs by using the CSS3 `matrix3d` transform.
 
 It demonstrates translation, scale, and rotation transformations, as well as exploring how to compose a single matrix transform from multiple transforms through matrix multiplication.
 
@@ -17,9 +17,11 @@ Composition     | TODO                                                          
 
 ## Navigating the lessons
 
-Lessons are located both in this repo and on JSFiddle. The `.js` files contain the lessons as comments next to the live code. The lessons are designed so that the code can be edited and tweaked for experimentation while reading along. When working from the code in the repo, the lessons are located in `/lessons` and are in alphabetical order. The lessons share some common code functions that can be found in the `/shared` folder. When working from JSFiddle the shared functions are pasted below the lessons.
+Lessons are located both in this repo and on JSFiddle. The `.js` files contain the lessons as comments next to the live code. The lessons are designed so that the code can be edited and tweaked for experimentation while following along. When working from the code in the repo, the lessons are located in `/lessons` and are in alphabetical order.
 
 ## Shared JavaScript Functions
+
+The lessons share some common code functions that can be found in the `/shared` folder. When working from JSFiddle the shared functions are located below the lessons.
 
 ### matrixArrayToCssMatrix(array)
 
