@@ -1,6 +1,6 @@
 /*
 
-  Here are the other rotation matrices. One big note here is that there is no perspective
+  Here are the other rotation matrices. One big note is that there is no perspective
   applied, so it might not feel very 3d yet. The flatness is equivalent to when a camera
   zooms in really close onto an object in the distance, the sense of perspective disappears.
 

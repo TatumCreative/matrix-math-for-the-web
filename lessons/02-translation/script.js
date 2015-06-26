@@ -3,12 +3,12 @@
   A translation matrix is based off the identity matrix. It moves the object
   in one of 3 directions, x, y, or z. The easiest way to think of a translation
   is like picking up a coffee cup. The coffee cup must be kept upright and oriented
-  the same way so that no coffee is spilt. It can move up in the air off the table
+  the same way so that no coffee is spilled. It can move up in the air off the table
   and around the air in space.
 
   Now the coffee can't actually be drank with only a translation matrix because
-  tilt the cup cannot be tilted. Another matrix will be discussed that will be able
-  to handle that task.
+  the cup cannot be tilted. In another lesson, a new matrix will be discussed that
+  will be able to handle that task.
 
 */
 
