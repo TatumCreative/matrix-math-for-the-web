@@ -25,7 +25,7 @@ The lessons share some common code functions that can be found in the `/shared` 
 
 ### matrixArrayToCssMatrix(array)
 
-Takes a an array of 16 numbers, and returns a string of the form `"matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)"`
+Takes an array of 16 numbers, and returns a string of the form `"matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)"`
 
 ### multiplyMatrices(a, b)
 
