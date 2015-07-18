@@ -2,44 +2,56 @@ function matrixArrayToCssMatrix(array) {
   return "matrix3d(" + array.join(',') + ")";
 }
 
-function multiplyMatrices(a, b) {
+function multiplyMatrixAndPoint(matrix, point) {
   
-  // TODO - Simplify for explanation
-  // currently taken from https://github.com/toji/gl-matrix/blob/master/src/gl-matrix/mat4.js#L306-L337
+  //Give a simple variable name to each part of the matrix, a column and row number
+  var c0r0 = matrix[ 0], c1r0 = matrix[ 1], c2r0 = matrix[ 2], c3r0 = matrix[ 3];
+  var c0r1 = matrix[ 4], c1r1 = matrix[ 5], c2r1 = matrix[ 6], c3r1 = matrix[ 7];
+  var c0r2 = matrix[ 8], c1r2 = matrix[ 9], c2r2 = matrix[10], c3r2 = matrix[11];
+  var c0r3 = matrix[12], c1r3 = matrix[13], c2r3 = matrix[14], c3r3 = matrix[15];
   
-  var result = [];
+  //Now set some simple names for the point
+  var x = point[0];
+  var y = point[1];
+  var z = point[2];
+  var w = point[3];
   
-  var a00 = a[0], a01 = a[1], a02 = a[2], a03 = a[3],
-      a10 = a[4], a11 = a[5], a12 = a[6], a13 = a[7],
-      a20 = a[8], a21 = a[9], a22 = a[10], a23 = a[11],
-      a30 = a[12], a31 = a[13], a32 = a[14], a33 = a[15];
+  //Multiply the point against each part of the 1st column, then add together
+  var resultX = (x * c0r0) + (y * c0r1) + (z * c0r2) + (w * c0r3);
+  
+  //Multiply the point against each part of the 2nd column, then add together
+  var resultY = (x * c1r0) + (y * c1r1) + (z * c1r2) + (w * c1r3);
+  
+  //Multiply the point against each part of the 3rd column, then add together
+  var resultZ = (x * c2r0) + (y * c2r1) + (z * c2r2) + (w * c2r3);
+  
+  //Multiply the point against each part of the 4th column, then add together
+  var resultW = (x * c3r0) + (y * c3r1) + (z * c3r2) + (w * c3r3);
+  
+  return [resultX, resultY, resultZ, resultW];
+}
 
-  // Cache only the current line of the second matrix
-  var b0  = b[0], b1 = b[1], b2 = b[2], b3 = b[3];  
-  result[0] = b0*a00 + b1*a10 + b2*a20 + b3*a30;
-  result[1] = b0*a01 + b1*a11 + b2*a21 + b3*a31;
-  result[2] = b0*a02 + b1*a12 + b2*a22 + b3*a32;
-  result[3] = b0*a03 + b1*a13 + b2*a23 + b3*a33;
-
-  b0 = b[4]; b1 = b[5]; b2 = b[6]; b3 = b[7];
-  result[4] = b0*a00 + b1*a10 + b2*a20 + b3*a30;
-  result[5] = b0*a01 + b1*a11 + b2*a21 + b3*a31;
-  result[6] = b0*a02 + b1*a12 + b2*a22 + b3*a32;
-  result[7] = b0*a03 + b1*a13 + b2*a23 + b3*a33;
-
-  b0 = b[8]; b1 = b[9]; b2 = b[10]; b3 = b[11];
-  result[8] = b0*a00 + b1*a10 + b2*a20 + b3*a30;
-  result[9] = b0*a01 + b1*a11 + b2*a21 + b3*a31;
-  result[10] = b0*a02 + b1*a12 + b2*a22 + b3*a32;
-  result[11] = b0*a03 + b1*a13 + b2*a23 + b3*a33;
-
-  b0 = b[12]; b1 = b[13]; b2 = b[14]; b3 = b[15];
-  result[12] = b0*a00 + b1*a10 + b2*a20 + b3*a30;
-  result[13] = b0*a01 + b1*a11 + b2*a21 + b3*a31;
-  result[14] = b0*a02 + b1*a12 + b2*a22 + b3*a32;
-  result[15] = b0*a03 + b1*a13 + b2*a23 + b3*a33;
-
-  return result;
+function multiplyMatrices(matrixA, matrixB) {
+  
+  // Slice the second matrix up into rows
+  var row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
+  var row1 = [matrixB[4], matrixB[5], matrixB[6], matrixB[7]];
+  var row2 = [matrixB[8], matrixB[9], matrixB[10], matrixB[11]];
+  var row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
+  
+  // Multiply each row by the matrix
+  var result0 = multiplyMatrixAndPoint( matrixA, row0 );
+  var result1 = multiplyMatrixAndPoint( matrixA, row1 );
+  var result2 = multiplyMatrixAndPoint( matrixA, row2 );
+  var result3 = multiplyMatrixAndPoint( matrixA, row3 );
+  
+  // Turn the results back into a single matrix
+  return [
+	  result0[0], result0[1], result0[2], result0[3],
+	  result1[0], result1[1], result1[2], result1[3],
+	  result2[0], result2[1], result2[2], result2[3],
+	  result3[0], result3[1], result3[2], result3[3],
+  ];
 }
 
 function multiplyArrayOfMatrices(matrices) {
