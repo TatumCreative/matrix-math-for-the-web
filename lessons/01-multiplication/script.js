@@ -100,6 +100,7 @@ function multiplyMatrices(matrixA, matrixB) {
   ]
 }
 
+// Usage:
 var someMatrix = [
   4, 0, 0, 0,
   0, 3, 0, 0,
@@ -108,3 +109,4 @@ var someMatrix = [
 ]
 
 multiplyMatrices(identityMatrix, someMatrix);
+// Returns a new array equivalent to someMatrix
