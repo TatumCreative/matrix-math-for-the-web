@@ -8,7 +8,7 @@ It demonstrates translation, scale, and rotation transformations, as well as exp
 
 Lesson          | JSFiddle                                                       | Code
 --------------- | -------------------------------------------------------------- | --------------------------------------------
-Multiplication  | TODO                                                           | [01-multiplication](lessons/02-translation/)
+Multiplication  | TODO                                                           | [01-multiplication](lessons/01-multiplication/)
 Translation     | [Live Example](https://jsfiddle.net/tatumcreative/g24mgw6y/)   | [02-translation](lessons/02-translation/)
 Scale           | TODO                                                           | [03-scale](lessons/03-scale/)
 Rotation Basics | TODO                                                           | [04-rotate](lessons/04-rotate/)
