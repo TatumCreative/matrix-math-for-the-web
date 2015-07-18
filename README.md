@@ -8,12 +8,12 @@ It demonstrates translation, scale, and rotation transformations, as well as exp
 
 Lesson          | JSFiddle                                                       | Code
 --------------- | -------------------------------------------------------------- | --------------------------------------------
-Multiplication  | TODO                                                           | TODO
-Translation     | [Live Example](https://jsfiddle.net/tatumcreative/g24mgw6y/)   | [script.js](lessons/02-translation/script.js)
-Scale           | TODO                                                           | [script.js](lessons/03-scale/script.js)
-Rotation Basics | TODO                                                           | [script.js](lessons/04-rotate/script.js)
-Rotate X/Y/Z    | TODO                                                           | [script.js](lessons/05-rotate-all/script.js)
-Composition     | TODO                                                           | [script.js](lessons/06-composition/script.js)
+Multiplication  | TODO                                                           | [01-multiplication](lessons/02-translation/)
+Translation     | [Live Example](https://jsfiddle.net/tatumcreative/g24mgw6y/)   | [02-translation](lessons/02-translation/)
+Scale           | TODO                                                           | [03-scale](lessons/03-scale/)
+Rotation Basics | TODO                                                           | [04-rotate](lessons/04-rotate/)
+Rotate X/Y/Z    | TODO                                                           | [05-rotate-all](lessons/05-rotate-all/)
+Composition     | TODO                                                           | [06-composition](lessons/06-composition/)
 
 ## Navigating the lessons
 
