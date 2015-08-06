@@ -43,6 +43,6 @@ var rotateZMatrix = [
 
 var moveMe = document.getElementById('move-me');
 
-var matrix3dRule = matrixArrayToCssMatrix( rotateZMatrix );
+var matrix3dRule = MDN.matrixArrayToCssMatrix( rotateZMatrix );
 
 moveMe.style.transform = matrix3dRule;

@@ -1,8 +1,10 @@
-function matrixArrayToCssMatrix(array) {
+var MDN = MDN || {};
+
+MDN.matrixArrayToCssMatrix = function (array) {
   return "matrix3d(" + array.join(',') + ")";
 }
 
-function multiplyMatrixAndPoint(matrix, point) {
+MDN.multiplyMatrixAndPoint = function (matrix, point) {
   
   //Give a simple variable name to each part of the matrix, a column and row number
   var c0r0 = matrix[ 0], c1r0 = matrix[ 1], c2r0 = matrix[ 2], c3r0 = matrix[ 3];
@@ -31,7 +33,10 @@ function multiplyMatrixAndPoint(matrix, point) {
   return [resultX, resultY, resultZ, resultW];
 }
 
-function multiplyMatrices(matrixA, matrixB) {
+MDN.multiplyMatrices = function (matrixA, matrixB) {
+
+  // A faster implementation of this function would not create
+  // any new arrays. This creates arrays for code clarity.
   
   // Slice the second matrix up into rows
   var row0 = [matrixB[0], matrixB[1], matrixB[2], matrixB[3]];
@@ -40,10 +45,10 @@ function multiplyMatrices(matrixA, matrixB) {
   var row3 = [matrixB[12], matrixB[13], matrixB[14], matrixB[15]];
   
   // Multiply each row by the matrix
-  var result0 = multiplyMatrixAndPoint( matrixA, row0 );
-  var result1 = multiplyMatrixAndPoint( matrixA, row1 );
-  var result2 = multiplyMatrixAndPoint( matrixA, row2 );
-  var result3 = multiplyMatrixAndPoint( matrixA, row3 );
+  var result0 = MDN.multiplyMatrixAndPoint( matrixA, row0 );
+  var result1 = MDN.multiplyMatrixAndPoint( matrixA, row1 );
+  var result2 = MDN.multiplyMatrixAndPoint( matrixA, row2 );
+  var result3 = MDN.multiplyMatrixAndPoint( matrixA, row3 );
   
   // Turn the results back into a single matrix
   return [
@@ -54,12 +59,12 @@ function multiplyMatrices(matrixA, matrixB) {
   ];
 }
 
-function multiplyArrayOfMatrices(matrices) {
+MDN.multiplyArrayOfMatrices = function (matrices) {
   
   var inputMatrix = matrices[0];
   
   for(var i=1; i < matrices.length; i++) {
-    inputMatrix = multiplyMatrices(inputMatrix, matrices[i]);
+    inputMatrix = MDN.multiplyMatrices(inputMatrix, matrices[i]);
   }
   
   return inputMatrix;

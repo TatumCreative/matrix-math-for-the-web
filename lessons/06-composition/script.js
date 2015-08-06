@@ -70,7 +70,7 @@ function scale(w, h, d) {
 }
 
 
-var transformMatrix = multiplyArrayOfMatrices([
+var transformMatrix = MDN.multiplyArrayOfMatrices([
 
 	// Uncomment below to reverse the transformation:
 	
@@ -89,6 +89,6 @@ var transformMatrix = multiplyArrayOfMatrices([
 
 var moveMe = document.getElementById('move-me');
 
-var matrix3dRule = matrixArrayToCssMatrix( transformMatrix );
+var matrix3dRule = MDN.matrixArrayToCssMatrix( transformMatrix );
 
 moveMe.style.transform = matrix3dRule;

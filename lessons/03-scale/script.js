@@ -18,6 +18,6 @@ var scaleMatrix = [
 
 var moveMe = document.getElementById('move-me');
 
-var matrix3dRule = matrixArrayToCssMatrix( scaleMatrix );
+var matrix3dRule = MDN.matrixArrayToCssMatrix( scaleMatrix );
 
 moveMe.style.transform = matrix3dRule;

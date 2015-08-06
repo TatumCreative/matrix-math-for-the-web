@@ -27,7 +27,7 @@ var translationMatrix = [
 var moveMe = document.getElementById('move-me');
 
 // Returns a result like: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 200, 0, 1);"
-var matrix3dRule = matrixArrayToCssMatrix( translationMatrix );
+var matrix3dRule = MDN.matrixArrayToCssMatrix( translationMatrix );
 
 // Set the transform
 moveMe.style.transform = matrix3dRule;

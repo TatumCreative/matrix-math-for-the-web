@@ -19,18 +19,27 @@ Composition     | TODO                                                          
 
 Lessons are located both in this repo and on JSFiddle. The `.js` files contain the lessons as comments next to the live code. The lessons are designed so that the code can be edited and tweaked for experimentation while following along. When working from the code in the repo, the lessons are located in `/lessons` and are in alphabetical order.
 
-## Shared JavaScript Functions
+## Getting started (10 min)
 
-The lessons share some common code functions that can be found in the `/shared` folder. When working from JSFiddle the shared functions are located below the lessons.
+The lessons can either be worked online from JSFiddle, or downloaded and explored locally. The content of the lessons is mixed in with the code. The `script.js` files contain most of the lesson, while the `index.html` contains the HTML. To download these files either [grab the zip file](https://github.com/TatumCreative/mdn-lighting-models/archive/master.zip) or run `git clone git@github.com:TatumCreative/mdn-lighting-models.git` from the command line.
 
-### matrixArrayToCssMatrix(array)
+#### Working locally checklist
 
-Takes an array of 16 numbers, and returns a string of the form `"matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)"`
+ 1. Verify browser supports unprefixed CSS3 transforms.
+ 2. Download the lesson files to your machine.
+ 3. Open the lessons in the browser:
+   * Either open the index.html files from the lessons in your browser
+   * Or if you are serving files with a local webserver, make sure and serve them from the root directory of the content kit so that the shared js files can be correctly loaded in.
 
-### multiplyMatrices(a, b)
+#### Working on JSFiddle checklist
 
-Multiplies the matrices `a` and `b` and returns the result.
+ 1. Verify browser supports unprefixed CSS3 transforms.
+ 2. Visit the JSFiddle links
 
-### multiplyArrayOfMatrices(matrices)
+## Lesson requirements
 
-Takes an array of matrices, and returns the multiplied result.
+These lessons require a [browser that supports unprefixed CSS3 3d transforms.](http://caniuse.com/#feat=transforms3d). The browsers that support this feature are Firefox 16+, Google Chrome 36+, Opera 23+, Safari 9+ and Internet Explorer 10+. It's assumed that the audience is familiar with a basic level web development, CSS, markup, and JavaScript.
+
+## Updates and Correction
+
+[Submit an issue](./issues) or a [pull request](https://help.github.com/articles/using-pull-requests/) for any corrections or updates. For a history of the updates visit the [commit history](https://github.com/TatumCreative/mdn-lighting-models/commits/master).

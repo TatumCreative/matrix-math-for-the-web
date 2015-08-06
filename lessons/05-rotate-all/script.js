@@ -44,5 +44,5 @@ function rotateAroundZAxis(a) {
 var matrix = rotateAroundZAxis( Math.PI * 0.3 );
 
 var moveMe = document.getElementById('move-me');
-var matrix3dRule = matrixArrayToCssMatrix( matrix );
+var matrix3dRule = MDN.matrixArrayToCssMatrix( matrix );
 moveMe.style.transform = matrix3dRule;
