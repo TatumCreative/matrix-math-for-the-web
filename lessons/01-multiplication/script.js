@@ -65,7 +65,9 @@ function multiplyMatrixAndPoint(matrix, point) {
   Now try multiplying the point by the matrix. It should return the exact same value.
 */
 
-multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]); // Returns [4,3,2,1]
+var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]); // Returns [4,3,2,1]
+
+console.log(identityResult);
 
 /*
   Returning the same point is not very useful, but there are other types of
@@ -108,5 +110,7 @@ var someMatrix = [
   4, 8, 4, 1
 ]
 
-multiplyMatrices(identityMatrix, someMatrix);
+var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 // Returns a new array equivalent to someMatrix
+
+console.log(someMatrixResult)
