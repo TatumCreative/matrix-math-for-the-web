@@ -6,14 +6,14 @@ It demonstrates translation, scale, and rotation transformations, as well as exp
 
 ## Lessons
 
-Lesson          | JSFiddle                                                       | Code
---------------- | -------------------------------------------------------------- | --------------------------------------------
-Multiplication  | TODO                                                           | [01-multiplication](lessons/01-multiplication/)
-Translation     | [Live Example](https://jsfiddle.net/tatumcreative/g24mgw6y/)   | [02-translation](lessons/02-translation/)
-Scale           | TODO                                                           | [03-scale](lessons/03-scale/)
-Rotation Basics | TODO                                                           | [04-rotate](lessons/04-rotate/)
-Rotate X/Y/Z    | TODO                                                           | [05-rotate-all](lessons/05-rotate-all/)
-Composition     | TODO                                                           | [06-composition](lessons/06-composition/)
+Lesson          | Code
+--------------- | --------------------------------------------
+Multiplication  | [01-multiplication](lessons/01-multiplication/)
+Translation     | [02-translation](lessons/02-translation/)
+Scale           | [03-scale](lessons/03-scale/)
+Rotation Basics | [04-rotate](lessons/04-rotate/)
+Rotate X/Y/Z    | [05-rotate-all](lessons/05-rotate-all/)
+Composition     | [06-composition](lessons/06-composition/)
 
 ## Navigating the lessons
 
